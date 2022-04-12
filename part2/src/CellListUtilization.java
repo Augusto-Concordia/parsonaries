@@ -33,5 +33,7 @@ public class CellListUtilization {
         //Have some fun with the lists
         //Output content again
 
+
+        System.out.println("Thank you for using our program! You have a nice day now, bye-bye!");
     }
 }
