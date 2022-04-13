@@ -35,5 +35,7 @@ public class CellListUtilization {
 
 
         System.out.println("Thank you for using our program! You have a nice day now, bye-bye!");
+
+        fileIn.close();
     }
 }

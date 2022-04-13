@@ -35,6 +35,7 @@ public class Main {
                  
                  What is the name of the txt file you want to read from? (You don't have to write .txt)""");
         fileName = consoleIn.nextLine();
+        consoleIn.close();
 
         //Open specified file
         try {

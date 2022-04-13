@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a127a8f-9183-44e9-aea0-a2dd7d209ff4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../part1/input/PersonOfTheCentury.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../part1/input/PersonOfTheCentury.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../part1/input/PersonOfTheCentury2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../part1/output/SubDictionary.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../part1/output/SubDictionary.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../part1/output/givenSubDictionary.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../part1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../part1/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CellListUtilization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CellListUtilization.java" afterDir="false" />
@@ -129,6 +125,8 @@
       <workItem from="1649721977974" duration="1000" />
       <workItem from="1649779323538" duration="3000000" />
       <workItem from="1649790202270" duration="600000" />
+      <workItem from="1649816985448" duration="73000" />
+      <workItem from="1649817115424" duration="2000" />
     </task>
     <servers />
   </component>
