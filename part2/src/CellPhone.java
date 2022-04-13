@@ -7,19 +7,18 @@ public class CellPhone {
     private int year;
     private double price;
 
-    public CellPhone(long SERIAL_NUM, String brand, int year, double price) {
+    public CellPhone(long SERIAL_NUM, String brand, double price,  int year) {
         this.SERIAL_NUM = SERIAL_NUM;
         this.brand = brand;
-        this.year = year;
         this.price = price;
+        this.year = year;
     }
 
     public CellPhone(CellPhone cellPhone, long SERIAL_NUM) {
-        this.SERIAL_NUM = SERIAL_NUM;
-        this.brand = cellPhone.brand;
-        this.year = cellPhone.year;
-        this.price = cellPhone.price;
+        this(SERIAL_NUM, cellPhone.brand, cellPhone.price, cellPhone.year);
     }
+
+    public long getSERIAL_NUM() {return SERIAL_NUM;}
 
     public String getBrand() {
         return brand;
@@ -45,16 +44,13 @@ public class CellPhone {
         this.price = price;
     }
 
-    public CellPhone clone(CellPhone cellPhone, long SERIAL_NUM) {
-        return new CellPhone(SERIAL_NUM, cellPhone.brand, cellPhone.year, cellPhone.price);
+    public CellPhone clone(long SERIAL_NUM) {
+        return new CellPhone(SERIAL_NUM, brand, price, year);
     }
 
     @Override
     public String toString() {
-        return "This cellphone's serial number is " + SERIAL_NUM +
-                ", its brand is " + brand +
-                ", its manufacturing year is " + year +
-                ", and it has a price of " + price + "$.";
+        return "[ " + SERIAL_NUM + ": " + brand + " " + price + "$ " + year + " ]";
     }
 
     @Override
