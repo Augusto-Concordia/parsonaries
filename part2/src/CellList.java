@@ -14,7 +14,7 @@ public class CellList {
         }
 
         public CellNode(CellNode cellNode) {
-            this(new CellPhone(cellNode.cellPhone, cellNode.cellPhone.getSERIAL_NUM()), cellNode == null || cellNode.next == null ? null : new CellNode(cellNode.next));
+            this(new CellPhone(cellNode.cellPhone, cellNode.cellPhone.getSERIAL_NUM()), cellNode.next == null ? null : new CellNode(cellNode.next));
         }
 
         public CellPhone getCellPhone() {
@@ -47,13 +47,6 @@ public class CellList {
             if (!cellPhone.equals(cellNode.cellPhone)) return false;
 
             return next != null ? next.equals(cellNode.next) : cellNode.next == null;
-        }
-
-        @Override
-        public int hashCode() {
-            int result = cellPhone.hashCode();
-            result = 31 * result + (next != null ? next.hashCode() : 0);
-            return result;
         }
 
         @Override
@@ -134,7 +127,8 @@ public class CellList {
     }
 
     public void deleteFromStart() {
-        head = head == null || head.getNext() == null ? head : head.getNext();
+        if (head == null) return;
+        head = head.getNext() == null ? head : head.getNext();
         size--;
     }
 
@@ -149,22 +143,6 @@ public class CellList {
         }
 
         temp.setCellPhone(cellPhone);
-    }
-
-    public CellNode findAtIndex(int index) {
-        if (index < 0 || index > size || head == null) return null;
-
-        CellNode prev = null;
-        CellNode temp = head;
-
-        for (int i = 0; i < index; i++) {
-            prev = temp;
-
-            if (temp.getNext() == null) break;
-
-            temp = temp.getNext();
-        }
-        return temp;
     }
 
     public CellNode find(long serialNum, boolean outputIterations) {

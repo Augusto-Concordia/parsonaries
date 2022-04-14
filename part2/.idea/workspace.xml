@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a127a8f-9183-44e9-aea0-a2dd7d209ff4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CellList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CellList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CellListUtilization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CellListUtilization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CellPhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CellPhone.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,21 +97,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="CellListUtilization" />
@@ -146,7 +132,9 @@
       <workItem from="1649790202270" duration="600000" />
       <workItem from="1649816985448" duration="73000" />
       <workItem from="1649817115424" duration="2000" />
-      <workItem from="1649855240544" duration="9944000" />
+      <workItem from="1649855240544" duration="11212000" />
+      <workItem from="1649953827449" duration="123000" />
+      <workItem from="1649954063389" duration="180000" />
     </task>
     <servers />
   </component>
