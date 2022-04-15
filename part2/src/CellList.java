@@ -26,8 +26,9 @@ public class CellList {
 
         /**
          * Parametrized constructor for this node.
+         *
          * @param cellPhone object to be stored in this node
-         * @param next next node in the linked list
+         * @param next      next node in the linked list
          */
         public CellNode(CellPhone cellPhone, CellNode next) {
             this.cellPhone = cellPhone;
@@ -36,6 +37,7 @@ public class CellList {
 
         /**
          * Copy constructor for this node.
+         *
          * @param cellNode node to be copied
          */
         public CellNode(CellNode cellNode) {
@@ -46,6 +48,7 @@ public class CellList {
 
         /**
          * Getter for the cell phone object
+         *
          * @return cell phone object
          */
         public CellPhone getCellPhone() {
@@ -54,6 +57,7 @@ public class CellList {
 
         /**
          * Setter for the cell phone object
+         *
          * @param cellPhone cell phone object
          */
         public void setCellPhone(CellPhone cellPhone) {
@@ -62,6 +66,7 @@ public class CellList {
 
         /**
          * Getter for the next node
+         *
          * @return next node
          */
         public CellNode getNext() {
@@ -70,6 +75,7 @@ public class CellList {
 
         /**
          * Setter for the next node
+         *
          * @param next next node
          */
         public void setNext(CellNode next) {
@@ -78,6 +84,7 @@ public class CellList {
 
         /**
          * Returns a copy of cell phone object with the given serial number.
+         *
          * @param SERIAL_NUM serial number of the cell phone object to be returned
          * @return cell phone object copy with the given serial number
          */
@@ -87,6 +94,7 @@ public class CellList {
 
         /**
          * Tests if this node is equal to the given object.
+         *
          * @param o object to be tested
          * @return true if the given object is equal to this node, false otherwise
          */
@@ -104,6 +112,7 @@ public class CellList {
 
         /**
          * Returns a string representation of this node.
+         *
          * @return string representation of this node
          */
         @Override
@@ -131,6 +140,7 @@ public class CellList {
 
     /**
      * Copy constructor
+     *
      * @param cellList list to be copied
      */
     public CellList(CellList cellList) {
@@ -140,6 +150,7 @@ public class CellList {
 
     /**
      * Parametrized constructor
+     *
      * @param size number of elements in the list
      * @param head head of the linked list
      */
@@ -150,6 +161,7 @@ public class CellList {
 
     /**
      * Adds a cell phone to the start of the list
+     *
      * @param newHead cell phone to be added
      */
     public void addToStart(CellPhone newHead) {
@@ -157,7 +169,7 @@ public class CellList {
         size++;
 
         if (head == null) {
-            head = new CellNode(newHead, null);
+            head = new CellNode(new CellPhone(newHead, newHead.getSERIAL_NUM()), null);
             return;
         }
 
@@ -166,8 +178,9 @@ public class CellList {
 
     /**
      * Adds a cell phone to the specified position in the list
+     *
      * @param cellPhone cell phone to be added
-     * @param index position in the list
+     * @param index     position in the list
      * @throws NoSuchElementException if the index is out of range
      */
     public void insertAtIndex(CellPhone cellPhone, int index) throws NoSuchElementException {
@@ -185,7 +198,7 @@ public class CellList {
             temp = temp.getNext();
         }
 
-        temp = new CellNode(cellPhone, temp);
+        temp = new CellNode(new CellPhone(cellPhone, cellPhone.getSERIAL_NUM()), temp);
         if (prev != null) prev.setNext(temp);
 
         size++;
@@ -193,12 +206,13 @@ public class CellList {
 
     /**
      * Deletes the cell phone at the specified position in the list
+     *
      * @param index position in the list
      * @throws NoSuchElementException if the index is out of range
      */
     public void deleteFromIndex(int index) throws NoSuchElementException {
         if (index < 0 || index > size - 1) throw new NoSuchElementException();
-        if ( head == null) return;
+        if (head == null) return;
 
         CellNode prev = null;
         CellNode temp = head;
@@ -228,13 +242,14 @@ public class CellList {
 
     /**
      * Replaces the cell phone at the specified position in the list
+     *
      * @param cellPhone cell phone to be replaced
-     * @param index position in the list
+     * @param index     position in the list
      * @throws NoSuchElementException if the index is out of range
      */
     public void replaceAtIndex(CellPhone cellPhone, int index) throws NoSuchElementException {
         if (index < 0 || index > size - 1) throw new NoSuchElementException();
-        if ( head == null) return;
+        if (head == null) return;
 
         CellNode temp = head;
 
@@ -242,12 +257,14 @@ public class CellList {
             temp = temp.getNext();
         }
 
-        temp.setCellPhone(cellPhone);
+        temp.setCellPhone(new CellPhone(cellPhone, cellPhone.getSERIAL_NUM()));
     }
 
     /**
-     * Finds the cell phone with the specified serial number
-     * @param serialNum serial number of the cell phone
+     * Finds the cell phone with the specified serial number.
+     * Note: the returned object is a pointer to the list's node, so a privacy leak occurs if the node is modified. Do not modify the node.
+     *
+     * @param serialNum        serial number of the cell phone
      * @param outputIterations if true, the number of iterations is printed to the console
      * @return cell phone with the specified serial number
      */
@@ -271,6 +288,7 @@ public class CellList {
 
     /**
      * Checks if the list contains the specified serial number
+     *
      * @param serialNum serial number of the cell phone
      * @return true if the list contains the specified serial number, false otherwise
      */
@@ -288,6 +306,7 @@ public class CellList {
 
     /**
      * String representation of the contents of the list
+     *
      * @return string representation of the contents of the list
      */
     public String showContents() {
@@ -306,6 +325,7 @@ public class CellList {
 
     /**
      * Checks if the list is equal to another list
+     *
      * @param list list to be compared to
      * @return true if the lists are equal, false otherwise
      */
